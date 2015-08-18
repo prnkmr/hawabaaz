@@ -11,7 +11,8 @@
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/emailreg"
+        android:hint="E-mail"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="71dp" />
@@ -21,8 +22,40 @@
         android:layout_height="wrap_content"
         android:inputType="phone"
         android:ems="10"
-        android:id="@+id/editText2"
-        android:layout_below="@+id/editText"
+        android:hint="Phone Number"
+        android:id="@+id/phnoreg"
+        android:layout_below="@+id/emailreg"
         android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/passreg"
+        android:hint="Password"
+        android:layout_below="@+id/phnoreg"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:hint="Retype Password"
+        android:id="@+id/repassreg"
+        android:layout_below="@+id/passreg"
+        android:layout_alignLeft="@+id/passreg"
+        android:layout_alignStart="@+id/passreg" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:id="@+id/registermain"
+        android:layout_below="@+id/repassreg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="85dp"
+        android:onClick="registerfunc"/>
 
 </RelativeLayout>
