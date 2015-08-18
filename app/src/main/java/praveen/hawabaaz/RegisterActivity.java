@@ -40,5 +40,6 @@ public class RegisterActivity extends ActionBarActivity {
     public void registerfunc(View v) {
         Toast toast = Toast.makeText(getApplicationContext(), "Registered", Toast.LENGTH_LONG);
         toast.show();
+        finish();
     }
 }

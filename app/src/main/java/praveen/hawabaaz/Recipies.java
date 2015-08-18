@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -26,11 +27,19 @@ public class Recipies extends ActionBarActivity implements AdapterView.OnItemCli
         list.add("Recipie One");
         list.add("Recipie Two");
         list.add("Recipie three");
+        list.add("Recipie Four");
+        list.add("Recipie Five");
 
         defaultAdapter = new ArrayAdapter(this,
                 android.R.layout.simple_list_item_1, list);
         listview.setAdapter(defaultAdapter);
         listview.setOnItemClickListener(this);
+        ((TextView)findViewById(R.id.cart)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), CartTemp.class));
+            }
+        });
     }
 
     @Override

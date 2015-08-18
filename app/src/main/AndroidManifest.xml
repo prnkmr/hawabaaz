@@ -44,6 +44,10 @@
             android:name=".AddressActivity"
             android:label="@string/title_activity_address" >
         </activity>
+        <activity
+            android:name=".CartTemp"
+            android:label="@string/title_activity_cart_temp" >
+        </activity>
     </application>
 
 </manifest>
