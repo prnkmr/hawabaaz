@@ -4,6 +4,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 public class RegisterActivity extends ActionBarActivity {
 
@@ -33,5 +35,10 @@ public class RegisterActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void registerfunc(View v) {
+        Toast toast = Toast.makeText(getApplicationContext(), "Registered", Toast.LENGTH_LONG);
+        toast.show();
     }
 }

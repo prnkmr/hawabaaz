@@ -9,4 +9,13 @@
         android:layout_height="wrap_content"
         android:id="@+id/usrdisplay" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pay"
+        android:id="@+id/paybuttmain"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="cartactstart"/>
+
 </RelativeLayout>
