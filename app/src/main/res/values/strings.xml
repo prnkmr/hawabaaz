@@ -9,4 +9,6 @@
     <string name="login">Login</string>
     <string name="register">Register</string>
     <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_temp_trial">TempTrialActivity</string>
+    <string name="title_activity_cart">CartActivity</string>
 </resources>

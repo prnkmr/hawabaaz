@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/prodimg"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:maxHeight="100dp"
+        android:maxWidth="100dp"
+        android:minHeight="100dp"
+        android:minWidth="100dp"
+        android:src="@drawable/abc_spinner_textfield_background_material"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Item1"
+        android:id="@+id/proname"
+        android:layout_alignBottom="@+id/prodimg"
+        android:layout_toRightOf="@+id/prodimg"
+        android:layout_toEndOf="@+id/prodimg"
+        android:paddingBottom="50dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Unit Cost: Rs."
+        android:id="@+id/produnitcost"
+        android:layout_alignBottom="@+id/prodimg"
+        android:layout_toRightOf="@+id/prodimg"
+        android:layout_toEndOf="@+id/prodimg"
+        android:paddingBottom="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Quantity"
+        android:id="@+id/qty"
+        android:layout_alignBottom="@+id/prodimg"
+        android:layout_toRightOf="@+id/prodimg"
+        android:layout_toEndOf="@+id/prodimg"
+        android:paddingLeft="150dp"
+        android:paddingBottom="50dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Cost: Rs."
+        android:id="@+id/totcost"
+        android:paddingBottom="15dp"
+        android:layout_alignBottom="@+id/proname"
+        android:layout_alignRight="@+id/qty"
+        android:layout_alignEnd="@+id/qty" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inc QTY"
+        android:id="@+id/button"
+        android:layout_below="@+id/prodimg"
+        android:layout_toLeftOf="@+id/proname"
+        android:layout_toStartOf="@+id/proname" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dec QTY"
+        android:id="@+id/button2"
+        android:layout_below="@+id/proname"
+        android:layout_toRightOf="@+id/button"
+        android:layout_toEndOf="@+id/button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REMOVE"
+        android:id="@+id/button3"
+        android:layout_below="@+id/totcost"
+        android:layout_toRightOf="@+id/button2"
+        android:layout_toEndOf="@+id/button2" />
+
+
+</RelativeLayout>
