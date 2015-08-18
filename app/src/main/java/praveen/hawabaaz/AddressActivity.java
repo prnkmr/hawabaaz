@@ -1,40 +1,22 @@
 package praveen.hawabaaz;
 
-import android.app.ListActivity;
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ListView;
 
-public class CartActivity extends ActionBarActivity {
-    ListView list;
-    String[] itemname ={
-            "Chicken Rice",
-            "Gobi Rice",
-            "Egg Rice",
-            "DragonChicken",
-            "Fish Fry",
-            "Prawn Fry",
-            "Chicken 65",
-            "Shawarma"
-    };
+public class AddressActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cart);
-        CustomListAdapter adapter=new CustomListAdapter(this, itemname);
-        list=(ListView)findViewById(R.id.listView);
-        list.setAdapter(adapter);
+        setContentView(R.layout.activity_address);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_cart, menu);
+        getMenuInflater().inflate(R.menu.menu_address, menu);
         return true;
     }
 
@@ -51,10 +33,5 @@ public class CartActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public void movetoaddress(View v) {
-        Intent i1 = new Intent(this, AddressActivity.class);
-        startActivity(i1);
     }
 }

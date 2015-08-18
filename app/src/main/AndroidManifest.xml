@@ -24,6 +24,26 @@
             android:name=".RegisterActivity"
             android:label="@string/title_activity_register" >
         </activity>
+        <activity
+            android:name=".CartActivity"
+            android:label="CartActivity" >
+        </activity>
+        <activity
+            android:name=".Locations"
+            android:label="Locations" >
+        </activity>
+        <activity
+            android:name=".RecipieDetails"
+            android:label="RecipieDetails" >
+        </activity>
+        <activity
+            android:name=".Recipies"
+            android:label="Recipies" >
+        </activity>
+        <activity
+            android:name=".AddressActivity"
+            android:label="@string/title_activity_address" >
+        </activity>
     </application>
 
 </manifest>

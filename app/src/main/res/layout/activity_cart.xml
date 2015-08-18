@@ -21,7 +21,8 @@
         android:text="Confirm"
         android:id="@+id/confirmpur"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="movetoaddress"/>
 
 
 </RelativeLayout>
