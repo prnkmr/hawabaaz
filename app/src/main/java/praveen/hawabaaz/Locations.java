@@ -6,24 +6,37 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
-public class MainActivity extends ActionBarActivity {
+import java.util.ArrayList;
+
+public class Locations extends ActionBarActivity implements AdapterView.OnItemClickListener {
+
+    private ArrayAdapter defaultAdapter;
+    private ListView listview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        startActivity(new Intent(this,LoginActivity.class));
-        setContentView(R.layout.activity_main);
-        /*TextView tv = (TextView) findViewById(R.id.usrdisplay);
-        Bundle bd = getIntent().getExtras();
-        tv.setText(bd.get("email").toString());*/
+        setContentView(R.layout.activity_locations);
+        listview = (ListView) findViewById(R.id.allEvents);
+        ArrayList list= new ArrayList();
+        list.add("Location One");
+        list.add("Location Two");
+        list.add("Location three");
+
+        defaultAdapter = new ArrayAdapter(this,
+                android.R.layout.simple_list_item_1, list);
+        listview.setAdapter(defaultAdapter);
+        listview.setOnItemClickListener(this);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_locations, menu);
         return true;
     }
 
@@ -42,8 +55,8 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void cartactstart(View v) {
-        Intent i1 = new Intent(this, CartActivity.class);
-        startActivity(i1);
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        startActivity(new Intent(this,Recipies.class));
     }
 }
