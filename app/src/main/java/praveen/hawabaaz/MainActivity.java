@@ -1,5 +1,6 @@
 package praveen.hawabaaz;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -11,10 +12,11 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        startActivity(new Intent(this,LoginActivity.class));
         setContentView(R.layout.activity_main);
-        TextView tv = (TextView) findViewById(R.id.usrdisplay);
+        /*TextView tv = (TextView) findViewById(R.id.usrdisplay);
         Bundle bd = getIntent().getExtras();
-        tv.setText(bd.get("email").toString());
+        tv.setText(bd.get("email").toString());*/
     }
 
     @Override

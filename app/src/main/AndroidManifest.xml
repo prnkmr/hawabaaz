@@ -24,6 +24,18 @@
             android:name=".RegisterActivity"
             android:label="@string/title_activity_register" >
         </activity>
+        <activity
+            android:name=".Locations"
+            android:label="@string/title_activity_locations" >
+        </activity>
+        <activity
+            android:name=".Recipies"
+            android:label="@string/title_activity_recipies" >
+        </activity>
+        <activity
+            android:name=".RecipieDetails"
+            android:label="@string/title_activity_recipie_details" >
+        </activity>
     </application>
 
 </manifest>

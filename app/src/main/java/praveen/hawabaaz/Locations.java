@@ -6,20 +6,37 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
-public class LoginActivity extends ActionBarActivity  {
+import java.util.ArrayList;
+
+public class Locations extends ActionBarActivity implements AdapterView.OnItemClickListener {
+
+    private ArrayAdapter defaultAdapter;
+    private ListView listview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_locations);
+        listview = (ListView) findViewById(R.id.allEvents);
+        ArrayList list= new ArrayList();
+        list.add("Location One");
+        list.add("Location Two");
+        list.add("Location three");
+
+        defaultAdapter = new ArrayAdapter(this,
+                android.R.layout.simple_list_item_1, list);
+        listview.setAdapter(defaultAdapter);
+        listview.setOnItemClickListener(this);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_login, menu);
+        getMenuInflater().inflate(R.menu.menu_locations, menu);
         return true;
     }
 
@@ -38,16 +55,8 @@ public class LoginActivity extends ActionBarActivity  {
         return super.onOptionsItemSelected(item);
     }
 
-    public void LoginCheck(View v) {
-        Intent i1 = new Intent(this, Locations.class);
-        EditText usrname = (EditText) findViewById(R.id.email);
-        String uname = usrname.getText().toString();
-        i1.putExtra("email", uname);
-        startActivity(i1);
-    }
-
-    public void RegisterActivity(View v) {
-        Intent i2 = new Intent(this, RegisterActivity.class);
-        startActivity(i2);
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        startActivity(new Intent(this,Recipies.class));
     }
 }

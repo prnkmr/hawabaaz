@@ -9,4 +9,7 @@
     <string name="login">Login</string>
     <string name="register">Register</string>
     <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_locations">Locations</string>
+    <string name="title_activity_recipies">Recipies</string>
+    <string name="title_activity_recipie_details">RecipieDetails</string>
 </resources>
