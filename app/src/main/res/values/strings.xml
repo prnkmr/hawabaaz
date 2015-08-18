@@ -1,6 +1,12 @@
 <resources>
-    <string name="app_name">hawabaaz</string>
+    <string name="app_name">Hawabaaz</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="usrname">Username or E-mail</string>
+    <string name="pass">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="title_activity_register">RegisterActivity</string>
 </resources>
