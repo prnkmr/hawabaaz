@@ -52,6 +52,14 @@
             android:name=".PaymentActivity"
             android:label="@string/title_activity_payment" >
         </activity>
+        <activity
+            android:name=".OrdersActivity"
+            android:label="@string/title_activity_orders" >
+        </activity>
+        <activity
+            android:name=".OrderStatusActivity"
+            android:label="@string/title_activity_order_status" >
+        </activity>
     </application>
 
 </manifest>

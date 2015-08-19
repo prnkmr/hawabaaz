@@ -9,11 +9,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class Recipies extends ActionBarActivity implements AdapterView.OnItemClickListener{
+public class OrdersActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
 
     private ArrayAdapter defaultAdapter;
     private ListView listview;
@@ -21,31 +20,23 @@ public class Recipies extends ActionBarActivity implements AdapterView.OnItemCli
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recipies);
-        listview = (ListView) findViewById(R.id.recipies);
+        setContentView(R.layout.activity_orders);
+        listview = (ListView) findViewById(R.id.orders);
         ArrayList list= new ArrayList();
-        list.add("Recipie One");
-        list.add("Recipie Two");
-        list.add("Recipie three");
-        list.add("Recipie Four");
-        list.add("Recipie Five");
+        list.add("Order 1");
+        list.add("Order 2");
+        list.add("Order 3");
 
         defaultAdapter = new ArrayAdapter(this,
                 android.R.layout.simple_list_item_1, list);
         listview.setAdapter(defaultAdapter);
         listview.setOnItemClickListener(this);
-        ((TextView)findViewById(R.id.cart)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), CartActivity.class));
-            }
-        });
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_locations, menu);
+        getMenuInflater().inflate(R.menu.menu_orders, menu);
         return true;
     }
 
@@ -66,11 +57,6 @@ public class Recipies extends ActionBarActivity implements AdapterView.OnItemCli
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        startActivity(new Intent(this,RecipieDetails.class));
-    }
-
-    public void orderpage(View v) {
-        Intent i2 = new Intent(this, OrdersActivity.class);
-        startActivity(i2);
+        startActivity(new Intent(this,OrderStatusActivity.class));
     }
 }

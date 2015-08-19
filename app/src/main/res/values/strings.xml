@@ -13,4 +13,6 @@
     <string name="title_activity_recipies">Recipies</string>
     <string name="title_activity_recipie_details">RecipieDetails</string>
     <string name="title_activity_payment">PaymentActivity</string>
+    <string name="title_activity_orders">OrdersActivity</string>
+    <string name="title_activity_order_status">OrderStatusActivity</string>
 </resources>
