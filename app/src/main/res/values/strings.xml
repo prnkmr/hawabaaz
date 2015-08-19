@@ -15,4 +15,5 @@
     <string name="title_activity_payment">PaymentActivity</string>
     <string name="title_activity_orders">OrdersActivity</string>
     <string name="title_activity_order_status">OrderStatusActivity</string>
+    <string name="title_activity_rating">RatingActivity</string>
 </resources>

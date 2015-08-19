@@ -27,10 +27,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pay"
-        android:id="@+id/button5"
+        android:id="@+id/finalpay"
         android:layout_below="@+id/radioButton2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="131dp" />
+        android:layout_marginTop="131dp"
+        android:onClick="givenoti"/>
 
     <RadioButton
         android:layout_width="wrap_content"
