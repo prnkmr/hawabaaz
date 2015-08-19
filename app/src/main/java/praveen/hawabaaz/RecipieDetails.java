@@ -22,7 +22,7 @@ public class RecipieDetails extends ActionBarActivity {
         ((TextView)findViewById(R.id.cart)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),CartTemp.class));
+                startActivity(new Intent(getApplicationContext(),CartActivity.class));
             }
         });
     }

@@ -1,9 +1,11 @@
 package praveen.hawabaaz;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class AddressActivity extends ActionBarActivity {
 
@@ -33,5 +35,9 @@ public class AddressActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    public void Showbill(View v) {
+        Intent i1 = new Intent(this, CartTemp.class);
+        startActivity(i1);
     }
 }

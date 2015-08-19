@@ -13,11 +13,8 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        startActivity(new Intent(this,LoginActivity.class));
+        //startActivity(new Intent(this,MainActivity.class));
         setContentView(R.layout.activity_main);
-        /*TextView tv = (TextView) findViewById(R.id.usrdisplay);
-        Bundle bd = getIntent().getExtras();
-        tv.setText(bd.get("email").toString());*/
     }
 
     @Override

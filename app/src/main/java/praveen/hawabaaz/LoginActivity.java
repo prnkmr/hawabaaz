@@ -40,9 +40,6 @@ public class LoginActivity extends ActionBarActivity  {
 
     public void LoginCheck(View v) {
         Intent i1 = new Intent(this, Locations.class);
-        EditText usrname = (EditText) findViewById(R.id.email);
-        String uname = usrname.getText().toString();
-        i1.putExtra("email", uname);
         startActivity(i1);
     }
 
