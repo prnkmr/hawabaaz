@@ -1,21 +1,27 @@
 package praveen.hawabaaz;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Recipies extends ActionBarActivity implements AdapterView.OnItemClickListener{
 
-    private ArrayAdapter defaultAdapter;
+    private CustomRecipiesListAdapter defaultAdapter;
+
+
     private ListView listview;
 
     @Override
@@ -30,10 +36,15 @@ public class Recipies extends ActionBarActivity implements AdapterView.OnItemCli
         list.add("Recipie Four");
         list.add("Recipie Five");
 
-        defaultAdapter = new ArrayAdapter(this,
-                android.R.layout.simple_list_item_1, list);
+        defaultAdapter = new CustomRecipiesListAdapter(this,list);
         listview.setAdapter(defaultAdapter);
-        listview.setOnItemClickListener(this);
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                startActivity(new Intent(getApplicationContext(),RecipieDetails.class));
+            }
+        });
+
         ((TextView)findViewById(R.id.cart)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,11 +77,35 @@ public class Recipies extends ActionBarActivity implements AdapterView.OnItemCli
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        startActivity(new Intent(this,RecipieDetails.class));
+
     }
 
     public void orderpage(View v) {
         Intent i2 = new Intent(this, OrdersActivity.class);
         startActivity(i2);
+    }
+
+
+    class CustomRecipiesListAdapter extends ArrayAdapter<String> {
+
+        private final Activity context;
+        private final ArrayList itemname;
+        //private final Integer[] imgid;
+
+        public CustomRecipiesListAdapter(Activity context, ArrayList itemname) {
+            super(context, R.layout.recipie_list_entry, itemname);
+            // TODO Auto-generated constructor stub
+
+            this.context=context;
+            this.itemname=itemname;
+        }
+
+        public View getView(int position,View view,ViewGroup parent) {
+            LayoutInflater inflater=context.getLayoutInflater();
+            View rowView=inflater.inflate(R.layout.recipie_list_entry, parent,false);
+            TextView name = (TextView) rowView.findViewById(R.id.name);
+            name.setText((String)itemname.get(position));
+            return rowView;
+        };
     }
 }
